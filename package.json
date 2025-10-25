@@ -23,7 +23,7 @@
     "@mastra/evals": "^0.14.2",
     "@mastra/libsql": "^0.16.1",
     "@mastra/memory": "^0.15.9",
-    "pino": "^8.17.2",
+    "pino": "8.17.2",
     "zod": "^4.1.12"
   },
   "devDependencies": {
