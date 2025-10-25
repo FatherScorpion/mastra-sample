@@ -6,3 +6,4 @@ dist
 .env
 *.db
 *.db-*
+# Ignore Vercel prebuilt output\n.vercel/output
