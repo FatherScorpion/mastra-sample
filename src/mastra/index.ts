@@ -11,6 +11,10 @@ const consoleLogger = {
   error: (message: string, ...args: any[]) => console.error(`[ERROR] ${message}`, ...args),
   warn: (message: string, ...args: any[]) => console.warn(`[WARN] ${message}`, ...args),
   debug: (message: string, ...args: any[]) => console.debug(`[DEBUG] ${message}`, ...args),
+  trackException: (error: Error, context?: any) => console.error(`[EXCEPTION] ${error.message}`, error, context),
+  getTransports: () => new Map(),
+  getLogs: () => Promise.resolve({ logs: [], total: 0, page: 1, perPage: 10, hasMore: false }),
+  getLogsByRunId: (args: { transportId: string; runId: string; fromDate?: Date; toDate?: Date; logLevel?: any; filters?: Record<string, any>; page?: number; perPage?: number; }) => Promise.resolve({ logs: [], total: 0, page: 1, perPage: 10, hasMore: false }),
 };
 
 export const mastra = new Mastra({
