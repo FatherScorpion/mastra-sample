@@ -1,4 +1,4 @@
-import { Mastra } from '@mastra/core/mastra';
+import { Mastra } from '@mastra/core';
 import { PinoLogger } from '@mastra/loggers';
 import { VercelDeployer }  from '@mastra/deployer-vercel';
 import { weatherWorkflow } from './workflows/weather-workflow';
