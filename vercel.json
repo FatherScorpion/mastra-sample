@@ -5,7 +5,7 @@
       "src": "src/mastra/index.ts",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["src/**"]
+        "includeFiles": ["src/**", "node_modules/pino/**", "node_modules/@mastra/**"]
       }
     }
   ],
@@ -17,5 +17,10 @@
   ],
   "env": {
     "NODE_ENV": "production"
+  },
+  "functions": {
+    "src/mastra/index.ts": {
+      "includeFiles": "node_modules/pino/**"
+    }
   }
 }
